@@ -1,5 +1,7 @@
 import express, {Application}  from "express";
 import tareaRoutes from '../routes/tarea';
+import cors from 'cors';
+import database from "../database/connection";
 
 
 
@@ -14,12 +16,32 @@ class Server{
     constructor(){
       this.app = express();
       this.port =process.env.PORT || '8000';
-       this.routes ();
+      
+      this.databaseConnection();
+      this.middlewares ();
+      this.routes ();
        
     }
 
-   
+    async databaseConnection(){
+    
+        try {
+            await database.authenticate();
+            console.log('Database online');
+        } catch (error) {
+            console.log(error);
 
+        }
+
+    
+    }
+
+    middlewares() {
+
+        this.app.use(cors());
+        this.app.use(express.json());
+  
+    }
     routes() {
          this.app.use(this.apiPaths.tarea, tareaRoutes);
      }
