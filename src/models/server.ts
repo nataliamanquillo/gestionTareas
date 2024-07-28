@@ -1,5 +1,5 @@
 import express, {Application}  from "express";
-import tareaRoutes from '../routes/tarea';
+import gestionRoutes from '../routes/gestionRutas';
 import cors from 'cors';
 import database from "../database/connection";
 
@@ -10,7 +10,8 @@ class Server{
     private port: string ;
 
     private apiPaths= {
-         tarea:'/api/tarea'
+         tarea:'/api',
+
      }
 
     constructor(){
@@ -43,7 +44,7 @@ class Server{
   
     }
     routes() {
-         this.app.use(this.apiPaths.tarea, tareaRoutes);
+         this.app.use(this.apiPaths.tarea, gestionRoutes);
      }
 
 
