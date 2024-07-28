@@ -8,7 +8,7 @@ class Server{
     private port: string ;
 
     private apiPaths= {
-         tareas:'/api/tareas'
+         tarea:'/api/tarea'
      }
 
     constructor(){
@@ -21,7 +21,7 @@ class Server{
    
 
     routes() {
-         this.app.use(this.apiPaths.tareas, tareaRoutes);
+         this.app.use(this.apiPaths.tarea, tareaRoutes);
      }
 
 
