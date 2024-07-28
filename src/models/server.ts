@@ -25,16 +25,16 @@ class Server{
 
     async databaseConnection(){
     
-        try {
+         try {
             await database.authenticate();
-            console.log('Database online');
-        } catch (error) {
-            console.log(error);
+             console.log('Database online');
+         } catch (error) {
+            console.error('Unable to connect to the database:', error);
+
+
+         }
 
         }
-
-    
-    }
 
     middlewares() {
 
