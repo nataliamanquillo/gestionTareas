@@ -1,5 +1,7 @@
 import { DataTypes } from "sequelize";
 import database from "../database/connection";
+import Usuario from "./usuario";
+import Estado from "./estado";
 
 
 
@@ -32,13 +34,14 @@ const Tarea = database.define('Tarea', {
      id_usuario: {
          type: DataTypes.INTEGER,
          allowNull: false,
+         
+         
 
      },
-    
 
-   
+},
 
-});
+);
 
 
 export default Tarea;

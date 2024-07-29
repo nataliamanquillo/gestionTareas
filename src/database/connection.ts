@@ -1,4 +1,7 @@
 import { Sequelize } from "sequelize";
+import Usuario from "../models/usuario";
+import Tarea from "../models/tarea";
+import Estado from "../models/estado";
 
 const database = new Sequelize ('gestiontareas', 'root', '', {
     host: 'localhost',
@@ -6,5 +9,7 @@ const database = new Sequelize ('gestiontareas', 'root', '', {
 
 
 });
+
+
 
 export default database;
