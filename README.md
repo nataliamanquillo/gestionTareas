@@ -11,6 +11,7 @@ typescript Version 5.5.4
 
 ## Instalación
 clonar el repositorio
+
 git clone https://github.com/nataliamanquillo/gestionTareas.git
 
 ### ingresar a la carpeta del repositorio
@@ -25,7 +26,7 @@ ejecute el script de la base de datos que se encuentra en el repositorio
 
 
 ### configurar base de datos
-en database/connection, actualizarlos datos de conección en la base de datos
+en database/connection, actualizar los datos de conexión en la base de datos
 
         const database = new Sequelize ('gestiontareas', 'root', '', {
             host: 'localhost',
@@ -45,7 +46,7 @@ localhost:8000/api
 para ver la documentación desde swagger ejecute
 npm run dev 
 
-para acceder vaya al navegador acceda a
+para acceder vaya al navegador acceda a la url
 http://localhost:8080/api-docs/
 
 
