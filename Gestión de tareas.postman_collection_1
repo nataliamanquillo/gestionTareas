@@ -1,0 +1,694 @@
+{
+	"info": {
+		"_postman_id": "c54f66f3-7614-423e-ab13-b9ec8fe21599",
+		"name": "Gestión de tareas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36553028"
+	},
+	"item": [
+		{
+			"name": "Listar tareas",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Listar tareas",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/tareas",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tareas"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "402"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"192-1zDrzBVCvX3ta5JB6EbvxGJFNR8\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 Jul 2024 18:37:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 20,\n        \"titulo\": \"tareass_78\",\n        \"descripcion\": \"descripción\",\n        \"fecha_vencimiento\": \"2024-07-29\",\n        \"id_estado\": 3,\n        \"id_usuario\": 2,\n        \"createdAt\": \"2024-07-29T15:20:30.000Z\",\n        \"updatedAt\": \"2024-07-29T18:40:09.000Z\"\n    },\n    {\n        \"id\": 24,\n        \"titulo\": \"tareas_88\",\n        \"descripcion\": \"descripción\",\n        \"fecha_vencimiento\": \"2024-07-29\",\n        \"id_estado\": 4,\n        \"id_usuario\": 2,\n        \"createdAt\": \"2024-07-29T15:20:30.000Z\",\n        \"updatedAt\": \"2024-07-29T18:39:06.000Z\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Ver tarea",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/tarea/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"tarea",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Ver tarea",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/tareas/{{id_tarea}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tareas",
+								"{{id_tarea}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "200"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c8-49DOlJeLrqaXRuz6/q1R4ze4ajY\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 Jul 2024 18:40:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 20,\n    \"titulo\": \"tareass_78\",\n    \"descripcion\": \"descripción\",\n    \"fecha_vencimiento\": \"2024-07-29\",\n    \"id_estado\": 3,\n    \"id_usuario\": 2,\n    \"createdAt\": \"2024-07-29T15:20:30.000Z\",\n    \"updatedAt\": \"2024-07-29T18:40:09.000Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Crear tarea",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/tarea",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"tarea"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Crear tarea",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"titulo\": \"tareas_55\",\r\n    \"descripcion\": \"descripción\",\r\n    \"fecha_vencimiento\": \"2024-07-29\",\r\n    \"id_estado\": 4,\r\n    \"id_usuario\": 2,\r\n    \"createdAt\": \"2024-07-29T15:20:30.000Z\",\r\n    \"updatedAt\": \"2024-07-29T17:24:39.000Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/tareas",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tareas"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "213"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"d5-H1ZrUPsA2MWdJJ801SHgi257pps\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 Jul 2024 18:41:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 25,\n    \"titulo\": \"tareas_55\",\n    \"descripcion\": \"descripción\",\n    \"fecha_vencimiento\": \"2024-07-29T00:00:00.000Z\",\n    \"id_estado\": 4,\n    \"id_usuario\": 2,\n    \"createdAt\": \"2024-07-29T15:20:30.000Z\",\n    \"updatedAt\": \"2024-07-30T18:41:02.327Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Actualizar tarea",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/tarea/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"tarea",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Actualizar tarea",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"id\": 20,\r\n        \"titulo\": \"tareass_78\",\r\n        \"descripcion\": \"descripción\",\r\n        \"fecha_vencimiento\": \"2024-07-29\",\r\n        \"id_estado\": 3,\r\n        \"id_usuario\": 2,\r\n        \"createdAt\": \"2024-07-29T15:20:30.000Z\",\r\n        \"updatedAt\": \"2024-07-29T15:32:26.000Z\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/tareas/{{id_tarea}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tareas",
+								"{{id_tarea}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "214"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"d6-WnHVWJ+ldaoN5+3bzjWvcRI9BFM\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 Jul 2024 18:43:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 20,\n    \"titulo\": \"tareass_78\",\n    \"descripcion\": \"descripción\",\n    \"fecha_vencimiento\": \"2024-07-29T00:00:00.000Z\",\n    \"id_estado\": 3,\n    \"id_usuario\": 2,\n    \"createdAt\": \"2024-07-29T15:20:30.000Z\",\n    \"updatedAt\": \"2024-07-30T18:43:10.796Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Eliminar tarea",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/tarea/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"tarea",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Eliminar tarea",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/tareas/{{id_tarea_1}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tareas",
+								"{{id_tarea_1}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "25"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"19-M0zQP/6oq0eEsii/SOi0flIal80\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 Jul 2024 18:45:22 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"Tarea eliminada\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Crear ususario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/usuario",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"usuario"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Crear ususario",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"Andrea Gomez\",\r\n    \"correo\":\"Andres123@gmail.com\",\r\n    \"contraseña\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/usuario",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"usuario"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "164"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a4-QTmA0rwIBxe1Vxn8lFKHlI6omYc\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 Jul 2024 18:46:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 8,\n    \"nombre\": \"Andrea Gomez\",\n    \"correo\": \"Andres123@gmail.com\",\n    \"contraseña\": \"123456\",\n    \"updatedAt\": \"2024-07-30T18:46:38.280Z\",\n    \"createdAt\": \"2024-07-30T18:46:38.280Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Listar estados",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/estados",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"estados"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "localhost:8000/api/estados",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/estados",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"estados"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "205"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"cd-/1W71S06WF8ySwR2L3+osknEPY8\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 Jul 2024 18:47:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 2,\n        \"tipo_estado\": \"hecho\",\n        \"createdAt\": null,\n        \"updatedAt\": null\n    },\n    {\n        \"id\": 3,\n        \"tipo_estado\": \"en proceso\",\n        \"createdAt\": null,\n        \"updatedAt\": null\n    },\n    {\n        \"id\": 4,\n        \"tipo_estado\": \"por hacer\",\n        \"createdAt\": null,\n        \"updatedAt\": null\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "iniciar sesión",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"correo\": \"juan@gmail.com\" ,\r\n    \"contraseña\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/sesion",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"sesion"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "iniciar sesión",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"correo\": \"juan@gmail.com\" ,\r\n    \"contraseña\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/sesion",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"sesion"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "256"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"100-ys4PN8uP4IeX+qpGdcw/UjgAOvE\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 Jul 2024 18:30:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiY29ycmVvIjoianVhbkBnbWFpbC5jb20iLCJjb250cmFzZcOxYSI6IjEyMzQ1NiIsImlhdCI6MTcyMjM2NDI1OH0.uO3cNOZQ3yM8zzalE5ztxSQ--l3LqXvt-E_LA9RMZ6w\",\n    \"id_usuario\": 2,\n    \"correo\": \"juan@gmail.com\",\n    \"contraseña\": \"123456\"\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "id_tarea",
+			"value": "20"
+		},
+		{
+			"key": "token_us",
+			"value": "2324"
+		}
+	]
+}
