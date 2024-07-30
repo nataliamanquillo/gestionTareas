@@ -1,10 +1,21 @@
 import dotenv from 'dotenv';
 import Server from './models/server';
+import  express  from 'express';
+import cors from 'cors';
+import swaggerUi from 'swagger-ui-express';
+import swaggerSpec from './swagger';
+import routes from './routes/gestionRutas';
 
 
-//configurar dot.env
 dotenv.config();
+const app= express()
 
-const server = new Server();
+ const server = new Server();
 
-server.listen();
+ server.listen();
+
+app .use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+
+app.listen(8080, ()=>{
+    console.log('Server running on port ');
+});
