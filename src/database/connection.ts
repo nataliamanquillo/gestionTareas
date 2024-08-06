@@ -6,6 +6,7 @@ import Estado from "../models/estado";
 const database = new Sequelize ('gestiontareas', 'root', '', {
     host: 'localhost',
     dialect: 'mysql',
+    
 
 
 });

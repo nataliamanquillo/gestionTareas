@@ -1,8 +1,6 @@
-import { DataTypes } from "sequelize";
+import { DataTypes, Model, ModelCtor } from "sequelize";
 import database from "../database/connection";
-
-
-
+import bcrypt from "bcrypt";
 
 const Usuario = database.define('Usuario', {
 
@@ -22,6 +20,8 @@ const Usuario = database.define('Usuario', {
         allowNull: false,
 
     },
+
+
  
 
    
@@ -29,4 +29,8 @@ const Usuario = database.define('Usuario', {
 });
 
 
+
+
+
 export default Usuario;
+
