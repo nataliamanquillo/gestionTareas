@@ -4,9 +4,9 @@ import Tarea from "../models/tarea";
 import Estado from "../models/estado";
 
 const database = new Sequelize ('gestiontareas', 'root', '', {
-    host: 'localhost',
+    host: 'mysql',
     dialect: 'mysql',
-    
+
 
 
 });
