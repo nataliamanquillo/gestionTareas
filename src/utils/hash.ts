@@ -8,3 +8,8 @@ export const createHashValue= async (value: string)=> {
 export const isValidPassword= async (psw: string, encryptedPsw:string)=> {
     return await bcrypt.compareSync(psw,encryptedPsw);
 }
+
+// public async validatePassword(password: string): Promise<boolean> {
+//     return bcrypt.compare(password, this.contraseña);
+//   }
+// }
