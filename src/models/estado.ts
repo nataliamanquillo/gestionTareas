@@ -4,7 +4,7 @@ import database from "../database/connection";
 
 
 
-const Estado = database.define('Estado', {
+const Estado = database.define('estado', {
 
     tipo_estado: {
         type: DataTypes.STRING,

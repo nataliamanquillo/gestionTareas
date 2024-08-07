@@ -3,7 +3,6 @@ import database from "../database/connection";
 import jwt from "jsonwebtoken";
 import Usuario from "../models/usuario";
 import  {isValidPassword} from "../utils/hash"
-import bcrypt from 'bcrypt'
 
 export const loginUsuario = async (req: Request, res: Response) =>{
     const {correo, contraseña } = req.body;

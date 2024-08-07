@@ -1,8 +1,7 @@
 import { DataTypes, Model, ModelCtor } from "sequelize";
 import database from "../database/connection";
-import bcrypt from "bcrypt";
 
-const Usuario = database.define('Usuario', {
+const Usuario = database.define('usuario', {
 
     nombre: {
         type: DataTypes.STRING,

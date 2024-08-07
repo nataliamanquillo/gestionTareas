@@ -6,7 +6,7 @@ import Estado from "./estado";
 
 
 
-const Tarea = database.define('Tarea', {
+const Tarea = database.define('tarea', {
 
     titulo: {
         type: DataTypes.STRING,
