@@ -42,6 +42,14 @@ tsc && nodemon dist/app
 la api queda desplegada en la url 
 localhost:8000/api
 
+
+## Ver DEMO
+
+Para ver la api implementada en heroku acceda a la url
+
+https://gestiontareas-e1103ffbaeac.herokuapp.com
+
+
 ## Documentacion
 para ver la documentación desde swagger ejecute
 npm run dev 
