@@ -4,6 +4,10 @@ import { crearUsuario } from "../controllers/usuario";
 import { listarEstados } from "../controllers/estado";
 import { auth } from "../middlewares/auth";
 import { loginUsuario } from "../controllers/login";
+import { verubicacion } from "../controllers/localizacion";
+import { listarCountry } from "../controllers/country";
+import { listarState } from "../controllers/state";
+import { listarCity } from "../controllers/city";
 
 
 const router = Router ();
@@ -19,6 +23,13 @@ router.post('/usuario', crearUsuario);
 router.get('/estados', listarEstados);
 
 router.post('/sesion',  loginUsuario);
+
+
+router.get('/country', listarCountry);
+router.get('/:id_country/state/', listarState);
+router.get('/:id_state/city', listarCity);
+//router.get('/geocode', verubicacion);
+
 
 
 
